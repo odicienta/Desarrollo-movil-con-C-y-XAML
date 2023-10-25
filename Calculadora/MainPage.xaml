@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BASE.MainPage">
+
+    <StackLayout>
+        <Label Text="Calculador" FontSize="Title" />
+        <Label Text="Escriba un valor y oprima el botón adecuado" FontSize="Default" />
+        <Entry Keyboard="Numeric" Placeholder="Número 1" x:Name="Entrada1" />
+        <Entry Keyboard="Numeric" Placeholder="Número 2" x:Name="Entrada2" />
+        <Button Text="Suma" x:Name="suma" />
+        <Button Text="Resta" x:Name="resta" />
+        <Button Text="Multiplicacion" x:Name="multi" />
+        <Button Text="Division" x:Name="div" />
+        <Button Text="Limpiar" x:Name="CL" />
+        <Label Text="0.00" FontSize="Title" HorizontalOptions="End" x:Name="Resultado" />
+        <Button Text="Guardar" Clicked="GuardarButton_Clicked" x:Name="guardarButton" />
+        <Button ImageSource="ver_icon.png" Text="Ver" Clicked="VerButton_Clicked" x:Name="verButton" />
+    </StackLayout>
+
+</ContentPage>
