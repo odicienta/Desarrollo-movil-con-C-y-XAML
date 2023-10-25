@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBanka.MenuPages.AddProductPage">
+    <ContentPage.Content>
+        <StackLayout Padding="20" Spacing="10">
+            <!-- Entry for product name -->
+            <Entry x:Name="productNameEntry" Placeholder="Nombre del Producto" />
+
+            <!-- Button to add product -->
+            <Button Text="Add Product" Clicked="AddProductButton_Clicked" />
+
+            <!-- List of products -->
+            <ListView x:Name="productsListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Spacing="10">
+                                <CheckBox CheckedChanged="OnProductCheckedChanged" VerticalOptions="Center" />
+                                <Label Text="{Binding Name}" VerticalOptions="Center" />
+                                <Button Text="Edit" Clicked="EditProductButton_Clicked" />
+                                <Button Text="Delete" Clicked="DeleteProductButton_Clicked" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

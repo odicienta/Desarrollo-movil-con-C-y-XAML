@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBanka.MenuPages.ListDetailsPage">
+
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Label Text="{Binding SelectedList.Name}" Style="{StaticResource MenuLabelStyle}" />
+            <ListView ItemsSource="{Binding SelectedList.Products}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Name}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <!-- Entry for product name -->
+            <Entry x:Name="listNameEntry" Placeholder="Nombre de Lista de Compras"
+                   IsVisible="{Binding IsEditMode}" />
+            <Button Text="Save List" Clicked="SaveListButton_Clicked"
+                    IsVisible="{Binding IsEditMode}" />
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

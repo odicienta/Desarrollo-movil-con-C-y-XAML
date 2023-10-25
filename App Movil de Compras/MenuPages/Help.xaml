@@ -1,0 +1,25 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBanka.Help">
+
+    <StackLayout Padding="20" Spacing="20">
+
+        <Label Text="Página de Ayuda" FontSize="24" FontAttributes="Bold" TextColor="#1B8C42" HorizontalOptions="CenterAndExpand" />
+
+        <Label Text="¿Cómo utilizar la aplicación?" FontAttributes="Bold" />
+        <Label Text="Puedes encontrar instrucciones detalladas sobre cómo utilizar las diferentes funciones de la aplicación en el tap de Información" />
+
+        <Label Text="Solución de problemas" FontAttributes="Bold" />
+        <Label Text="En caso de errores, ponte en contacto con el equipo técnico" />
+
+        <Label Text="Video" FontAttributes="Bold" />
+        <WebView Source="https://youtube.com/shorts/31hYVLGSM8c" WidthRequest="300" HeightRequest="200" />
+
+        <Button Text="Consejos para Economía en el Hogar"
+                Clicked="OnEconomyTipsButtonClicked"
+                BackgroundColor="#2ecc71"
+                TextColor="White"
+                Margin="0,20,0,0" />
+
+    </StackLayout>
+</ContentPage>

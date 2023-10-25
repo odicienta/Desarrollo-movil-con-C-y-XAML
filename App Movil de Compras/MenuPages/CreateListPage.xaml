@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBanka.CreateListPage">
+
+    <ContentPage.Content>
+        <StackLayout Padding="20" Spacing="10">
+            <!-- Entry for product name -->
+            <Entry x:Name="listNameEntry" Placeholder="Nombre de Lista de Compras"
+                   IsVisible="{Binding IsCreateMode}" />
+            <Button Text="Save List" Clicked="SaveListButton_Clicked"
+                    IsVisible="{Binding IsCreateMode}" />
+
+            <ListView x:Name="shoppingListsListView" ItemSelected="ShoppingListTapped" ItemsSource="{Binding ShoppingLists}"
+                      IsVisible="{Binding IsListViewVisible}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Name}" />
+                                <Button Text="Editar" Clicked="EditListButton_Clicked"
+                                        CommandParameter="{Binding .}" />
+                                <Button Text="Eliminar" Clicked="DeleteListButton_Clicked"
+                                        CommandParameter="{Binding .}" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

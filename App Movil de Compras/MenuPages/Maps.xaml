@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBanka.Maps">
+
+    <StackLayout Padding="20" VerticalOptions="CenterAndExpand">
+
+        <Label x:Name="lblLocaliza" Text="Ubicación en Mapa" FontSize="24" HorizontalOptions="CenterAndExpand" TextColor="#2ecc71" />
+
+        <Button x:Name="BtnGps" Text="Habilitar GPS" BackgroundColor="#2ecc71" TextColor="White" Margin="0,20,0,10" />
+
+
+        <Entry x:Name="EntryLatitude" Placeholder="Latitud" Keyboard="Numeric" BackgroundColor="White" Margin="0,0,0,10" />
+
+        <Entry x:Name="EntryLongitud" Placeholder="Longitud" Keyboard="Numeric" BackgroundColor="White" Margin="0,0,0,10" />
+
+        <Button Text="Abrir Coordenadas" x:Name="btnMap" BackgroundColor="#2ecc71" TextColor="White" Margin="0,20,0,0" />
+
+        <!-- Location Picker -->
+        <Label Text="Seleccionar Tienda" FontSize="18" TextColor="#2ecc71" Margin="0,20,0,5" />
+        <Picker x:Name="LocationPicker" Title="Seleccionar Ubicación" SelectedIndexChanged="OnLocationPickerSelectedIndexChanged" BackgroundColor="White">
+            <Picker.Items>
+                <x:String>Tienda San Jose</x:String>
+                <x:String>Tienda Limon</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Entry x:Name="EntryEmail"  Placeholder="Ingresa Email" Text="" Keyboard="Email" />
+
+        <Entry x:Name="EntrySubject"  Placeholder="Ingresa Subject" Text=""  />
+
+        <Button Text="Enviar" x:Name="btnMail"/>
+
+    </StackLayout>
+</ContentPage>
