@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBanka.MainPage">
+
+    <ContentPage.Resources>
+        <Style TargetType="Entry">
+            <Setter Property="BackgroundColor" Value="#E5E5E5" />
+            <Setter Property="TextColor" Value="#333333" />
+            <Setter Property="PlaceholderColor" Value="#999999" />
+            <Setter Property="Margin" Value="10,5" />
+            <Setter Property="HeightRequest" Value="40" />
+            <Setter Property="FontFamily" Value="Arial" />
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="#4CAF50" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="CornerRadius" Value="8" />
+            <Setter Property="Margin" Value="10,20,10,10" />
+            <Setter Property="HeightRequest" Value="40" />
+            <Setter Property="FontFamily" Value="Arial" />
+        </Style>
+        <Style TargetType="Label" x:Key="StatusStyle">
+            <Setter Property="TextColor" Value="#4CAF50" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="FontFamily" Value="Arial" />
+            <Setter Property="FontAttributes" Value="Bold" />
+        </Style>
+    </ContentPage.Resources>
+
+    <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Padding="20" BackgroundColor="White">
+        <Image Source="basket.png" HeightRequest="150" WidthRequest="150" HorizontalOptions="Center" Margin="0,0,0,20" />
+
+        <Entry x:Name="txtnombre" Placeholder="Nombre de usuario" />
+        <Entry x:Name="txtclave" Placeholder="Contraseña" IsPassword="True" />
+
+        <Button Text="Iniciar Sesión" Clicked="BtnLogin_Clicked" />
+
+        <Button Text="Registrarse" Clicked="BtnSignup_Clicked" />
+
+        <Label Text="lblstatus" Style="{StaticResource StatusStyle}" x:Name="lblstatus" VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand" Margin="0,20,0,0" />
+
+        <Button Text="Limpiar" Clicked="BtnLimpiar_Clicked" HorizontalOptions="CenterAndExpand" BackgroundColor="#888888" TextColor="White" CornerRadius="8" Margin="0,20,0,0" />
+    </StackLayout>
+
+</ContentPage>

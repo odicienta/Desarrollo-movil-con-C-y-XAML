@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBanka.Menu">
+    <ContentPage.Resources>
+        <!-- Estilo para el botón -->
+        <Style x:Key="MenuButtonStyle" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="#1B8C42" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="CornerRadius" Value="20" />
+            <Setter Property="Padding" Value="30,10" />
+            <Setter Property="Margin" Value="0,10" />
+            <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+            <Setter Property="VerticalOptions" Value="Center" />
+            <Setter Property="FontAttributes" Value="Bold" />
+        </Style>
+
+        <!-- Estilo para el label -->
+        <Style x:Key="MenuLabelStyle" TargetType="Label">
+            <Setter Property="TextColor" Value="#1B8C42" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="VerticalOptions" Value="Center" />
+            <Setter Property="Margin" Value="0,10" />
+            <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+            <Setter Property="FontAttributes" Value="Bold" />
+        </Style>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Padding="20" Spacing="20">
+            <Button Text="Crear nueva lista" Style="{StaticResource MenuButtonStyle}" Clicked="CreateListButton_Clicked" />
+            <Button Text="Ver listas" Style="{StaticResource MenuButtonStyle}" Clicked="ViewListsButton_Clicked" />
+            <Button Text="Map" Style="{StaticResource MenuButtonStyle}"   Clicked="Mapa_Clicked"/>
+            <Button Text="Ayuda" Style="{StaticResource MenuButtonStyle}" Clicked="Help_Clicked"  />
+            
+            
+            <Button Text="Reset Preferences" Style="{StaticResource MenuButtonStyle}" Clicked="ResetPreferencesButton_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
