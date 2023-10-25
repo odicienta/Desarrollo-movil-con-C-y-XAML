@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App9.Menu">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Padding="20">
+            <Frame BackgroundColor="#1B8C42" CornerRadius="10" Padding="10" HeightRequest="120" WidthRequest="300" Margin="40,10,40,20">
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="registro_peso_icon.png" HeightRequest="60" WidthRequest="60" VerticalOptions="Center" Margin="20,0,0,0" />
+                    <Button BackgroundColor="#1B8C42" Text="Registro de Peso" TextColor="White" FontSize="18" VerticalOptions="Center" Margin="20,0,0,0" x:Name="RegistroPeso"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame BackgroundColor="#1B8C42" CornerRadius="10" Padding="10" HeightRequest="120" WidthRequest="300" Margin="40,10,40,20">
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="lista_medicamentos_icon.png" HeightRequest="60" WidthRequest="60" VerticalOptions="Center" Margin="20,0,0,0"  />
+                    <Label Text="Lista de Medicamentos" TextColor="White" FontSize="18" VerticalOptions="Center" Margin="20,0,0,0" />
+                </StackLayout>
+            </Frame>
+
+            <Frame BackgroundColor="#1B8C42" CornerRadius="10" Padding="10" HeightRequest="120" WidthRequest="300" Margin="40,10,40,20">
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="horas_sueno_icon.png" HeightRequest="60" WidthRequest="60" VerticalOptions="Center" Margin="20,0,0,0" />
+                    <Label Text="Horas de Sueño" TextColor="White" FontSize="18" VerticalOptions="Center" Margin="20,0,0,0" />
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

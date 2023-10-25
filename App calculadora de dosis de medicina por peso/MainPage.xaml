@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App9.MainPage">
+
+    <Grid>
+        <Image Source="LogoBank1.jpg" Aspect="AspectFill" />
+        <Grid BackgroundColor="#F5F5F5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Image Grid.Row="0" Source="LogoBank2.jpg" WidthRequest="100"
+                  HeightRequest="100" Margin="0,50,0,30"/>
+            <StackLayout Grid.Row="1" Padding="10,20">
+                <Entry Placeholder="Enter email" PlaceholderColor="#1B8C42" x:Name="usr"/>
+                <Entry Placeholder="Enter password" PlaceholderColor="#1B8C42" IsPassword="True" x:Name="pwd"/>
+                <Button Text="Iniciar Sesión" BackgroundColor="#1B8C42" TextColor="White" CornerRadius="20"  x:Name="BtnIr"/>
+                <Button Text="Registrarse" BackgroundColor="#1B8C42" TextColor="White" CornerRadius="20"  x:Name="BtnRegistrarse"/>
+                <StackLayout Orientation="Horizontal">
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </Grid>
+
+</ContentPage>
